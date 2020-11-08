@@ -1,5 +1,5 @@
 #TASK 1 -PREDICTION USING SUPERVISED ML(LEVEL- BEGINNER)
-
+#REQUIRED LIBRARIES
 library(tidyverse)
 library(PredictionR)
 library(ggpubr)
@@ -9,14 +9,14 @@ theme_set(theme_pubr())
 
 
 
-
+#CREATING THE DATA
 Hours<-c(2.5,5.1,3.2,8.5,3.5,1.5,9.2,5.5,8.3,2.7,7.7,5.9,4.5,3.3,1.1,8.9,2.5,1.9,6.1,7.4,2.7,4.8,3.8,6.9,7.8)
 Scores<-c(21,47,27,75,30,20,88,60,81,25,85,62,41,42,17,95,30,24,67,69,30,54,35,76,86)
 data1<-data.frame(Hours,Scores)
 print(data1)
 
 #DATA VISUALIZATION
-
+windows(4,4)
 ggplot(data1, aes(x = Hours, y = Scores)) +
   geom_point() +
   stat_smooth()
@@ -39,6 +39,7 @@ model
 #The estimated regression line can be written as Scores = 2.484+9.776*Hours
 
 #Regression line
+windows(4,4)
 ggplot(data1, aes(Hours, Scores)) +
   geom_point() +
   stat_smooth(method = lm)
