@@ -20,6 +20,7 @@ print(data1)
 ggplot(data1, aes(x = Hours, y = Scores)) +
   geom_point() +
   stat_smooth()
+ggsave("plot1.png")
  
 
 #The above graph shows an increasing relationship between hours and scores variables.
@@ -41,6 +42,7 @@ model
 ggplot(data1, aes(Hours, Scores)) +
   geom_point() +
   stat_smooth(method = lm)
+ggsave("plot2.png")
 
 summary(model)
 
